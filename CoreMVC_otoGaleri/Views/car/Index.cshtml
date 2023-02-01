@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<marka>
+
+<div class="row">
+    @foreach(marka m in @Model){
+        <div class="card col-3 m-2 text-center" >
+            <img class="img-thumbnail" src="~/assets/img/@m.markaimgurl"/>
+            <a class="btn btn-primary w-100" asp-controller="car" asp-action="modellistele">@m.markaadi</a>
+        </div>
+    }
+    
+</div>
